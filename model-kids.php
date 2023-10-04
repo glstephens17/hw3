@@ -1,8 +1,8 @@
 <?php
-function selectParents() {
+function selectKids() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT parent_id, parent_name, city_name FROM `parents`");
+        $stmt = $conn->prepare("SELECT kid_id, kid_name, kid_birthyear FROM `kids`");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
