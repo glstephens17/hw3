@@ -13,9 +13,9 @@
  while ($kid = $kids->fetch_assoc()) {
  ?>
    <tr>
-     <td><?php echo $parent['kid_id']; ?></td>
-     <td><?php echo $parent['kid_name']; ?></td>
-     <td><?php echo $parent['kid_birthyear']; ?></td>
+     <td><?php echo $kid['kid_id']; ?></td>
+     <td><?php echo $kid['kid_name']; ?></td>
+     <td><?php echo $kid['kid_birthyear']; ?></td>
    </tr>
  <?php  
  }
