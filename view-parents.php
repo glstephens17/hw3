@@ -5,7 +5,8 @@
       <tr>
       <th>ID</th>
       <th>Name</th>
-      <th>City</th> 
+      <th>City</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -16,6 +17,7 @@
      <td><?php echo $parent['parent_id']; ?></td>
      <td><?php echo $parent['parent_name']; ?></td>
      <td><?php echo $parent['city_name']; ?></td>
+     <td><a href="parents-pets.php?id=<?php echo $parent['parent_id']; ?>"</a><td>
    </tr>
  <?php  
  }
