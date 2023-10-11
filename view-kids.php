@@ -5,7 +5,8 @@
       <tr>
       <th>ID</th>
       <th>Name</th>
-      <th>Birth Year</th> 
+      <th>Birth Year</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
