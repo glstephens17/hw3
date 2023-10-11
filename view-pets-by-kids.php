@@ -3,7 +3,6 @@
   <table class="table">
     <thead>
       <tr>
-         <th>Kid Id</th>
       <th>Pet Name</th>
       <th>Pet Breed</th>
       <th>Kid Name</th>
@@ -17,7 +16,6 @@
               {
                 ?>
                   <tr>
-                    <td><?php echo $pet['pet_id'];?></td>
                     <td><?php echo $pet['pet_name'];?></td>
                     <td> <?php echo $pet['pet_breed'];?></td>
                     <td><?php echo $pet['kid_name'];?></td>
