@@ -19,7 +19,7 @@
      <td><?php echo $kid['kid_birthyear']; ?></td>
      <td>
   <form method="post" action="pets-by-kids.php">
-    <input type="hidden" name="kid" value="<?php echo kid['kid_id'];?>"/>
+    <input type="hidden" name="kid" value="<?php echo $kid['kid_id'];?>"/>
     <button type="submit" class="btn btn-primary">Pets</button>
   </form>
      </td>     
