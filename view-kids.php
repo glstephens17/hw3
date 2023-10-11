@@ -18,7 +18,7 @@
      <td><?php echo $kid['kid_name']; ?></td>
      <td><?php echo $kid['kid_birthyear']; ?></td>
      <td><form method="post" action="pets-by-kids.php">
-                        <input type="hidden" name="pid" value="<?php echo $kids['kid_id'];?>"/>
+                        <input type="hidden" name="kid" value="<?php echo $kids['kid_id'];?>"/>
                             <button type="submit" class="btn btn-primary">Pets</button>
                           </form></td>     
    </tr>
