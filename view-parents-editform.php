@@ -4,4 +4,28 @@
           <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
         </svg>
          </button>
-        
+        <!-- Modal -->
+<div class="modal fade" id="parentModal" tabindex="-1" aria-labelledby="parentModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="parentModalLabel">New Parent</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="">
+  <div class="mb-3">
+    <label for="pName" class="form-label">Parent Name</label>
+    <input type="text" class="form-control" id="pName" name="pName">
+      </div>
+  <div class="mb-3">
+    <label for="pCity" class="form-label">Parent City</label>
+    <input type="text" class="form-control" id="pCity" name="pCity">
+  </div>
+          <input type="hidden" name="actionType" value="Edit">
+   <button type="submit" class="btn btn-primary">Add</button>
+</form>
+          </div>
+        </div>
+  </div>
+</div>
