@@ -12,11 +12,11 @@ function selectParents() {
         throw $e;
     }
 }
-function insertParent($parentName, $parentCity) {
+function insertParent($pName, $pCity) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `parents` (`parent_name`, `city_name`) VALUES (?,?);");
-        $stmt->bind_param("ss", $parentName, $parentCity);
+        $stmt->bind_param("ss", $pName, $pCity);
         $success = $stmt->execute();
             $conn->close();
         return $success;
