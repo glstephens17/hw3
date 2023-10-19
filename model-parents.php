@@ -25,4 +25,30 @@ function insertParent($parentName, $parentCity) {
         throw $e;
     }
 }
+function updateParent($parentName, $parentCity, $pId) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE `parents` set `parent_name` = ?, `city_name` = ? WHERE `parent_id` = ?");
+        $stmt->bind_param("ssi", $parentName, $parentCity, $pId);
+        $success = $stmt->execute();
+            $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+function deleteParent($pId) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("DELETE FROM `parents` WHERE `parent_id` = ?");
+        $stmt->bind_param("i", $pId);
+        $success = $stmt->execute();
+            $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
