@@ -16,12 +16,12 @@
       <div class="modal-body">
         <form method="post" action="">
   <div class="mb-3">
-    <label for="parentName" class="form-label">Parent Name</label>
-    <input type="text" class="form-control" id="parentName" name="parentName">
+    <label for="pName" class="form-label">Parent Name</label>
+    <input type="text" class="form-control" id="pName" name="pName">
       </div>
   <div class="mb-3">
-    <label for="parentCity" class="form-label">Parent City</label>
-    <input type="text" class="form-control" id="parentCity" name="parentCity">
+    <label for="pCity" class="form-label">Parent City</label>
+    <input type="text" class="form-control" id="pCity" name="pCity">
   </div>
           <input type="hidden" name="actionType" value="Add">
    <button type="submit" class="btn btn-primary">Add</button>
