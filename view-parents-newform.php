@@ -23,6 +23,7 @@
     <label for="pCity" class="form-label">Parent City</label>
     <input type="text" class="form-control" id="pCity" name="pCity">
   </div>
+          <input type="hidden" name="actionType" value="Add">
    <button type="submit" class="btn btn-primary">Add</button>
 </form>
           </div>
