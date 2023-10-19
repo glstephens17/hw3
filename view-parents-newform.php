@@ -17,11 +17,11 @@
         <form>
   <div class="mb-3">
     <label for="pName" class="form-label">Parent Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="text" class="form-control" id="pName">
       </div>
   <div class="mb-3">
     <label for="pCity" class="form-label">Parent City</label>
-    <input type="text" class="form-control" id="exampleInputPassword1">
+    <input type="text" class="form-control" id="pCity">
   </div>
    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
