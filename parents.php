@@ -8,7 +8,7 @@ include "view-header.php";
 if(isset($POST['actionType'])){
   switch($POST['actionType']){
     case "Add":
-        insertParent($POST['pName'],$POST['pCity']);
+        insertParent($POST['parentName'],$POST['parentCity']);
         break;
   }
 }
