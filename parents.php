@@ -6,8 +6,8 @@ $pageTitle = "Parents";
 include "view-header.php";
 
 if(isset($POST['actionType'])){
-  switch(($POST['actionType']){
-          case "Add":
+  switch($POST['actionType']){
+    case "Add":
         insertParent($POST['pName'],$POST['pCity']);
         break;
   }
