@@ -14,16 +14,16 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="post" action="">
   <div class="mb-3">
     <label for="pName" class="form-label">Parent Name</label>
-    <input type="text" class="form-control" id="pName">
+    <input type="text" class="form-control" id="pName" name="pName">
       </div>
   <div class="mb-3">
     <label for="pCity" class="form-label">Parent City</label>
-    <input type="text" class="form-control" id="pCity">
+    <input type="text" class="form-control" id="pCity" name="pCity">
   </div>
-   <button type="submit" class="btn btn-primary">Submit</button>
+   <button type="submit" class="btn btn-primary">Add</button>
 </form>
           </div>
         </div>
