@@ -1,4 +1,11 @@
+<div class = "row">
+<div class = "col">
 <h1>Parents</h1>
+</div> 
+  <div class = "col-auto">
+    <i class="bi bi-person-add"></i>
+  </div>
+</div>
 <div class="table-responsive">
   <table class="table">
     <thead>
