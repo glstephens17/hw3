@@ -1,4 +1,3 @@
-
 <div class="row">
 <div class="col">
 <h1>Parents with Kids</h1>
@@ -37,4 +36,5 @@ $parent['city_name'];?></small></p>
 <?php
 }
 ?>
+</div>
 </div>
