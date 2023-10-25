@@ -21,14 +21,14 @@ aria-label="Close"></button>
 <div class="modal-body">
 <form method="post" action="">
 <div class="mb-3">
-<label for="did" class="form-label">Parent</label>
+<label for="pId" class="form-label">Parent</label>
 <?php $parentList=selectParentsForInput();
 $selectedParent = 0;
 include "view-parent-input-list.php"; ?>
 </div>
 <div class="mb-3">
-<label for="kid" class="form-label">Kid Id</label>
-<input type="text" class="form-control" id="kid" name="kid">
+<label for="kid_name" class="form-label">Kid Name</label>
+<input type="text" class="form-control" id="kid_name" name="kid_name">
 </div>
 <div class="mb-3">
 <label for="kid_birthyear" class="form-label">Birth Year</label>
