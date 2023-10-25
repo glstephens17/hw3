@@ -39,12 +39,11 @@
           }
           ?>
         </ul>
-      </p> <!-- This is the corrected placement of the closing </p> tag -->
+      </p>
       <p class="card-text"><small class="text-body-secondary">City: <?php echo $parent['city_name']; ?></small></p>
     </div>
   </div>
   <?php
   }
   ?>
-</div>
 </div>
