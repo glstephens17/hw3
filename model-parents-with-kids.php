@@ -41,6 +41,19 @@ $conn->close();
 throw $e;
 }
 }
+function updateParentWithKids($kid_name, $kid_birthyear, $pid,$kid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE `kids` set `$kid_name` = ?, `$kid_birthyear` = ?, `parent_id` = ? where kid_id=?");
+        $stmt->bind_param("ssii", $kid_name, $kid_birthyear, $pid,$kid);
+        $success = $stmt->execute();
+            $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 
 function insertParentWithKids( $kid_name, $kid_birthyear, $pid) {
 try {
