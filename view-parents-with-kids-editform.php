@@ -28,7 +28,6 @@
     <input type="text" class="form-control" id="pid<?php echo $kid['kid_id'];?>" value="<?php echo $kid['parent_id'];?>" name="pid">
   </div>
          <input type="hidden" name="kid" value="<?php echo $kid['kid_id']; ?>">
-         <input type="hidden" name="pid" value="<?php echo $kid['parent_id']; ?>">
           <input type="hidden" name="actionType" value="Edit">
    <button type="submit" class="btn btn-primary">Add</button>
 </form>
