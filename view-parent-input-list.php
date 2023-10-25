@@ -1,3 +1,4 @@
+<select class="form-select" id="pid" name="pid"> 
 <?php while ($parentItem = $parentList->fetch_assoc()) {
 $selText="";
 if($selectedParent==$parentItem['parent_id'])
