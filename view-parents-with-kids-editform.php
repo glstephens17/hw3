@@ -16,14 +16,17 @@
       <div class="modal-body">
         <form method="post" action="">
   <div class="mb-3">
-    <label for="parentName" class="form-label">Parent Name</label>
-    <input type="text" class="form-control" id="parentName<?php echo $parent['parent_id'];?>" name="parentName" value="<?php echo $parent['parent_name'];?>">
+    <label for="kid_name" class="form-label">Kid Name</label>
+    <input type="text" class="form-control" id="kid_name" name="kid_name">
+      </div>
+<div class="mb-3">
+    <label for="kid_birthyear" class="form-label">Kid Birth Year</label>
+    <input type="text" class="form-control" id="kid_birthyear" name="kid_birthyear">
       </div>
   <div class="mb-3">
-    <label for="parentCity" class="form-label">Parent City</label>
-    <input type="text" class="form-control" id="parentCity<?php echo $parent['parent_id'];?>" value="<?php echo $parent['city_name'];?>" name="parentCity">
+    <label for="pid" class="form-label">Parent Id</label>
+    <input type="text" class="form-control" id="pid" name="pid">
   </div>
-          <input type="hidden" name="pId" value="<?php echo $parent['parent_id'];?>">
           <input type="hidden" name="actionType" value="Edit">
    <button type="submit" class="btn btn-primary">Add</button>
 </form>
