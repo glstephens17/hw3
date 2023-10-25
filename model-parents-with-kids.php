@@ -26,4 +26,35 @@ $conn->close();
 throw $e;
 }
 }
+
+function deleteParentWithKids($kid) {
+try {
+$conn = get_db_connection();
+$stmt = $conn->prepare("Delete from `kids` where kid_id=? ");
+$stmt->bind_param("i", $kid);
+$stmt->execute();
+$success = $stmt->execute();
+$conn->close();
+return $success;
+} catch (Exception $e) {
+$conn->close();
+throw $e;
+}
+}
+
+function insertParentWithKids( $kid_name, $kid_birthyear, $pid) {
+try {
+$conn = get_db_connection();
+$stmt = $conn->prepare("INSERT INTO `kids` (`kid_name`, `kid_birthyear`, `parent_id`)VALUES ( ?, ?, ?);");
+$stmt->bind_param("ssi", $kid_name, $kid_birthyear,$pid);
+$success = $stmt->execute();
+$conn->close();
+return $success;
+} catch (Exception $e) {
+console.log("error",$e);
+$conn->close();
+throw $e;
+}
+}
+
 ?>
