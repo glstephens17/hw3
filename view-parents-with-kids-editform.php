@@ -24,8 +24,10 @@
     <input type="text" class="form-control" id="kid_birthyear<?php echo $kid['kid_id'];?>" value="<?php echo $kid['kid_birthyear'];?>" name="kid_birthyear">
       </div>
   <div class="mb-3">
-    <label for="pid<?php echo $kid['kid_id'];?>" class="form-label">Parent Id</label>
-    <input type="text" class="form-control" id="pid<?php echo $kid['kid_id'];?>" value="<?php echo $kid['parent_id'];?>" name="pid">
+    <label for="pid<?php echo $kid['kid_id'];?>" class="form-label">Parent</label>
+   <?php $parentList=selectParentsForInput();
+$selectedParent = $kid['parent_id'];
+include "view-parent-input-list.php"; ?>
   </div>
          <input type="hidden" name="kid" value="<?php echo $kid['kid_id']; ?>">
           <input type="hidden" name="actionType" value="Edit">
