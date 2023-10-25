@@ -5,23 +5,24 @@
         </svg>
          </button>
         <!-- Modal -->
-<div class="modal fade" id="edit" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+<div class="modal fade" id="editParentModal<?php echo $parent['parent_id'];?>" tabindex="-1" aria-labelledby="editParentModal<?php echo $parent['parent_id'];?>" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="editLabel">New Parent</h1>
+        <h1 class="modal-title fs-5" id="editParentModalLabel<?php echo $parent['parent_id'];?>">Edit Parent</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="">
   <div class="mb-3">
-    <label for="pName" class="form-label">Parent Name</label>
-    <input type="text" class="form-control" id="pName" name="pName">
+    <label for="parentName" class="form-label">Parent Name</label>
+    <input type="text" class="form-control" id="parentName<?php echo $parent['parent_id'];?>" name="parentName" value="<?php echo $parent['parent_name'];?>">
       </div>
   <div class="mb-3">
-    <label for="pCity" class="form-label">Parent City</label>
-    <input type="text" class="form-control" id="pCity" name="pCity">
+    <label for="parentCity" class="form-label">Parent City</label>
+    <input type="text" class="form-control" id="parentCity<?php echo $parent['parent_id'];?>" value="<?php echo $parent['city_name'];?>" name="parentCity">
   </div>
+          <input type="hidden" name="pId" value="<?php echo $parent['parent_id'];?>">
           <input type="hidden" name="actionType" value="Edit">
    <button type="submit" class="btn btn-primary">Add</button>
 </form>
