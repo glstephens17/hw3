@@ -11,13 +11,13 @@ if(isset($_POST['actionType'])){
           echo '<div class="alert alert-success" role="alert">Added a new Kid successfully!</div>';
         }
         else{
-          echo '<div class="alert alert-danger" role="alert">There was an error adding the parent</div>';
+          echo '<div class="alert alert-danger" role="alert">There was an error adding the Kid</div>';
         }
         break;
     case "Edit":
-          if(updateParent($_POST['parentName'], $_POST['parentCity'], $_POST['pId']))
+          if(updateParentWithKids($_POST['kid_name'], $_POST['kid_birthyear'], $_POST['pid'],$_POST['kid']))
           {
-          echo '<div class="alert alert-success" role="alert"> Parent successfully edited!</div>';
+          echo '<div class="alert alert-success" role="alert"> Kid successfully edited!</div>';
           }
           else
           {
@@ -27,7 +27,7 @@ if(isset($_POST['actionType'])){
     case "Delete":
         if (deleteParentWithKids($_POST['kid']))
         {
-        echo '<div class="alert alert-success" role="alert"> Parent successfully deleted!</div>';
+        echo '<div class="alert alert-success" role="alert"> Kid successfully deleted!</div>';
         }
         else {
         echo '<div class="alert alert-danger" role="alert"> Error</div>';
