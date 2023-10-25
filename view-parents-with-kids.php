@@ -24,8 +24,10 @@
           <li class="list-group-item">
             <?php echo $kid['kid_name']; ?> -
             <?php echo $kid['kid_birthyear']; ?> 
+            <?php include "view-parents-with-kids-editform.php"; ?>
+            <div class="btn-group" role="group">
             <form method="post" action="">
-              <input type="hidden" name="kid" value="<?php echo $kid['kid_id']; ?>">
+              <input type="hidden" name="kid" value="<?php echo $kid['kid_id']; ?>"/>
               <input type="hidden" name="actionType" value="Delete">
               <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure you want to Delete?')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
@@ -34,7 +36,9 @@
                 </svg>
               </button>
             </form>
+            </div>
           </li>
+    
           <?php
           }
           ?>
