@@ -75,7 +75,7 @@ throw $e;
 function selectParentsForInput() {
 try {
 $conn = get_db_connection();
-$stmt = $conn->prepare("SELECT parent_id, parent_name FROM `parent` order by
+$stmt = $conn->prepare("SELECT parent_id, parent_name FROM `parents` order by
 parent_name ");
 $stmt->execute();
 $result = $stmt->get_result();
