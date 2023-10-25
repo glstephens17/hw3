@@ -23,10 +23,12 @@
     <label for="kid_birthyear" class="form-label">Kid Birth Year</label>
     <input type="text" class="form-control" id="kid_birthyear" name="kid_birthyear">
       </div>
-  <div class="mb-3">
-    <label for="pid" class="form-label">Parent Id</label>
-    <input type="text" class="form-control" id="pid" name="pid">
-  </div>
+          <div class="mb-3">
+<label for="pid" class="form-label">Parent</label>
+<?php $parentList=selectParentsForInput();
+$selectedParent = 0;
+include "view-parent-input-list.php"; ?>
+</div>
           <input type="hidden" name="actionType" value="Add">
    <button type="submit" class="btn btn-primary">Add</button>
 </form>
