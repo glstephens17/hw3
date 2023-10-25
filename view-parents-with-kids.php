@@ -27,7 +27,7 @@
             <div class="btn-group" role="group">
             <?php include "view-parents-with-kids-editform.php"; ?>
             <form method="post" action="">
-              <input type="hidden" name="kid" value="<?php echo $kid['parent_id']; ?>">
+              <input type="hidden" name="kid" value="<?php echo $kid['k.kid_id']; ?>">
               <input type="hidden" name="actionType" value="Delete">
               <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure you want to Delete?')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
