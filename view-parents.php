@@ -31,7 +31,7 @@ include "view-parents-newform.php";
        <td>
           <?php
     include "view-parents-editform.php";
-    ?>
+    ?></td>
    <td>
 <form method="post" action="">
 <input type="hidden" name="pId" value="<?php echo $parent['parent_id'];?>"/>
