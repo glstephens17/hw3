@@ -5,8 +5,8 @@ require_once("model-parents.php");
 $pageTitle = "Parents";
 include "view-header.php";
 
-if(isset($POST['actionType'])){
-  switch($POST['actionType']){
+if(isset($_POST['actionType'])){
+  switch($_POST['actionType']){
     case "Add":
         if(insertParent($_POST['pName'],$_POST['pCity'])){
           echo '<div class="alert alert-success" role="alert">Added a new Parent successfully!</div>';
