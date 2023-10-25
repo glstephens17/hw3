@@ -8,7 +8,7 @@ include "view-header.php";
 if(isset($POST['actionType'])){
   switch($POST['actionType']){
     case "Add":
-        if(insertParent($POST['pName'],$POST['pCity'])){
+        if(insertParent($_POST['pName'],$_POST['pCity'])){
           echo '<div class="alert alert-success" role="alert">Added a new Parent successfully!</div>';
         }
         else{
