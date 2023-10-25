@@ -25,9 +25,7 @@
       </div>
   <div class="mb-3">
     <label for="pid<?php echo $kid['kid_id'];?>" class="form-label">Parent</label>
-   <?php $parentList=selectParentsForInput();
-$selectedParent = $kid['parent_id'];
-include "view-parent-input-list.php"; ?>
+         <input type="hidden" name="pid" value="<?php echo $kid['parent_id']; ?>">
   </div>
          <input type="hidden" name="kid" value="<?php echo $kid['kid_id']; ?>">
           <input type="hidden" name="actionType" value="Edit">
