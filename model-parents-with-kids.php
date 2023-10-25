@@ -15,7 +15,7 @@ throw $e;
 function selectKidsByParent($did) {
 try {
 $conn = get_db_connection();
-$stmt = $conn->prepare("SELECT k_kid_id,p.parent_id, parent_name, city_name, kid_name, kid_birthyear FROM `parents` p join `kids` k on p.parent_id=k.parent_id where k.parent_id=?");
+$stmt = $conn->prepare("SELECT k.kid_id,p.parent_id, parent_name, city_name, kid_name, kid_birthyear FROM `parents` p join `kids` k on p.parent_id=k.parent_id where k.parent_id=?");
 $stmt->bind_param("i", $did);
 $stmt->execute();
 $result = $stmt->get_result();
