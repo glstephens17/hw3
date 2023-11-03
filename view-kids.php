@@ -1,4 +1,7 @@
 <h1>Kids</h1>
+<?php
+include "view-kids-newform.php";
+?>
 <div class="table-responsive">
   <table class="table">
     <thead>
