@@ -38,10 +38,10 @@ function updatePet($petName, $petBreed, $pId) {
         throw $e;
     }
 }
-function deleteParent($pId) {
+function deletePet($pId) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE FROM `parents` WHERE `parent_id` = ?");
+        $stmt = $conn->prepare("DELETE FROM `pet` WHERE `pet_id` = ?");
         $stmt->bind_param("i", $pId);
         $success = $stmt->execute();
             $conn->close();
