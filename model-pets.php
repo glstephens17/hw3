@@ -12,11 +12,11 @@ function selectPets() {
         throw $e;
     }
 }
-function insertKid($kName, $kBirthYear, $pID) {
+function insertPet($pName, $pBreed) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `kids` (`kid_name`, `kid_birthyear`, `parent_id`) VALUES (?,?,?);");
-        $stmt->bind_param("ssi", $kName, $kBirthYear, $pID);
+        $stmt = $conn->prepare("INSERT INTO `pet` (`pet_name`, `pet_breed`) VALUES (?,?);");
+        $stmt->bind_param("ss", $pName, $pBreed);
         $success = $stmt->execute();
             $conn->close();
         return $success;
