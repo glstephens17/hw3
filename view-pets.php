@@ -1,4 +1,4 @@
-<h1>Kids</h1>
+<h1>Pets</h1>
 <?php
 include "view-pets-newform.php";
 ?>
