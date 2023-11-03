@@ -25,7 +25,7 @@ function insertKid($kName, $kBirthYear, $pID) {
         throw $e;
     }
 }
-function updateKid($kidName, $kidBirthYear, $kId, $pId) {
+function updateKid($kidName, $kidBirthYear, $kId, $pid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `kids` set `kid_name` = ?, `kid_birthyear` = ?, `parent_id`=? WHERE `kid_id` = ?");
