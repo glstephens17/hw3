@@ -16,7 +16,7 @@ function insertKid($kName, $kBirthYear, $pID) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `kids` (`kid_name`, `kid_birthyear`, `parent_id`) VALUES (?,?,?);");
-        $stmt->bind_param("ssi", $kName, $kBirthYear, $pID);
+        $stmt->bind_param("ssi", $kName, $kBirthYear, $pId);
         $success = $stmt->execute();
             $conn->close();
         return $success;
@@ -25,11 +25,11 @@ function insertKid($kName, $kBirthYear, $pID) {
         throw $e;
     }
 }
-function updateKid($kidName, $kidBirthYear, $pId, $kId) {
+function updateKid($kidName, $kidBirthYear, $kId, $pId) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `kids` set `kid_name` = ?, `kid_birthyear` = ?, `parent_id`=? WHERE `kid_id` = ?");
-        $stmt->bind_param("ssii",$kidName, $kidBirthYear, $pId, $kId);
+        $stmt->bind_param("ssii",$kidName, $kidBirthYear, $kId, $pId);
         $success = $stmt->execute();
             $conn->close();
         return $success;
