@@ -16,12 +16,12 @@
       <div class="modal-body">
         <form method="post" action="">
   <div class="mb-3">
-    <label for="kName" class="form-label">Pet Name</label>
-    <input type="text" class="form-control" id="kName" name="kName">
+    <label for="pName" class="form-label">Pet Name</label>
+    <input type="text" class="form-control" id="pName" name="pName">
       </div>
   <div class="mb-3">
-    <label for="kBirthYear" class="form-label">Pet Breed</label>
-    <input type="text" class="form-control" id="kBirthYear" name="kBirthYear">
+    <label for="pBreed" class="form-label">Pet Breed</label>
+    <input type="text" class="form-control" id="pBreed" name="pBreed">
   </div>
     <input type="hidden" name="actionType" value="Add">
    <button type="submit" class="btn btn-primary">Add</button>
