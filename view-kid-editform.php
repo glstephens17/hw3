@@ -22,6 +22,10 @@
     <label for="kidBirthYear" class="form-label">Kid Birth Year</label>
     <input type="text" class="form-control" id="kidBirthYear<?php echo $kid['kid_id'];?>" value="<?php echo $kid['kid_birthyear'];?>" name="kidBirthYear">
   </div>
+         <div class="mb-3">
+    <label for="pId" class="form-label">Parent ID</label>
+    <input type="text" class="form-control" id="pId<?php echo $kid['kid_id'];?>" value="<?php echo $kid['parent_id'];?>" name="pId">
+  </div>
           <input type="hidden" name="kId" value="<?php echo $kid['kid_id'];?>">
           <input type="hidden" name="actionType" value="Edit">
    <button type="submit" class="btn btn-primary">Add</button>
