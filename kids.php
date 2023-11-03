@@ -33,6 +33,7 @@ if(isset($_POST['actionType'])){
         echo '<div class="alert alert-danger" role="alert"> Error</div>';
         }
   }
+}
 $kids = selectKids();
 include "view-kids.php";
 include "view-footer.php";
