@@ -12,4 +12,5 @@ function selectKids() {
         throw $e;
     }
 }
+INSERT INTO `kids` (`kid_id`, `kid_name`, `kid_birthyear`, `parent_id`) VALUES (NULL, 'Random', '2005', '1');
 ?>
