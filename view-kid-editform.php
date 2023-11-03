@@ -21,10 +21,11 @@
   <div class="mb-3">
     <label for="kidBirthYear" class="form-label">Kid Birth Year</label>
     <input type="text" class="form-control" id="kidBirthYear<?php echo $kid['kid_id'];?>" value="<?php echo $kid['kid_birthyear'];?>" name="kidBirthYear">
-  </div>
-         <div class="mb-3">
-    <label for="pId" class="form-label">Parent ID</label>
-    <input type="text" class="form-control" id="pId<?php echo $kid['kid_id'];?>" value="<?php echo $kid['parent_id'];?>" name="pId">
+  <div class="mb-3">
+    <label for="pid<?php echo $kid['kid_id'];?>" class="form-label">Parent</label>
+   <?php $parentList=selectParentsForInput();
+$selectedParent = $kid['parent_id'];
+include "view-parent-input-list.php"; ?>
   </div>
           <input type="hidden" name="kId" value="<?php echo $kid['kid_id'];?>">
           <input type="hidden" name="actionType" value="Edit">
