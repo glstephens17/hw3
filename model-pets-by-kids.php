@@ -13,4 +13,17 @@ function selectPetsByKids($kid) {
         throw $e;
     }
 }
+function insertPetsByKids($kName, $kBirthYear, $pID) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `kids` (`kid_name`, `kid_birthyear`, `parent_id`) VALUES (?,?,?);");
+        $stmt->bind_param("ssi", $kName, $kBirthYear, $pID);
+        $success = $stmt->execute();
+            $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
