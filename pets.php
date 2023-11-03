@@ -25,9 +25,9 @@ if(isset($_POST['actionType'])){
           }
           break;
     case "Delete":
-        if (deleteParent($_POST['pId']))
+        if (deletePet($_POST['pId']))
         {
-        echo '<div class="alert alert-success" role="alert"> Parent successfully deleted!</div>';
+        echo '<div class="alert alert-success" role="alert"> Pet successfully deleted!</div>';
         }
         else {
         echo '<div class="alert alert-danger" role="alert"> Error</div>';
