@@ -25,11 +25,11 @@ function insertPet($pName, $pBreed) {
         throw $e;
     }
 }
-function updateParent($parentName, $parentCity, $pId) {
+function updatePet($petName, $petBreed, $pId) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `parents` set `parent_name` = ?, `city_name` = ? WHERE `parent_id` = ?");
-        $stmt->bind_param("ssi", $parentName, $parentCity, $pId);
+        $stmt = $conn->prepare("UPDATE `pet` set `pet_name` = ?, `pet_breed` = ? WHERE `pet_id` = ?");
+        $stmt->bind_param("ssi", $petName, $petBreed, $pId);
         $success = $stmt->execute();
             $conn->close();
         return $success;
