@@ -26,6 +26,9 @@
           <a class="nav-link" href="kids.php">Kids</a>
         </li> 
         <li class="nav-item">
+          <a class="nav-link" href="pets.php">Pets</a>
+        </li> 
+        <li class="nav-item">
           <a class="nav-link" href="parents-with-kids.php">Parents with kids</a>
         </li> 
       </ul>
