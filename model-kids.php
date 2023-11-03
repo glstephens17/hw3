@@ -30,7 +30,7 @@ function updateKid($kidName, $kidBirthYear, $pid, $kId) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `kids` set `kid_name` = ?, `kid_birthyear` = ?, `parent_id`=? WHERE `kid_id` = ?");
-        $stmt->bind_param("ssii",$kidName, $kidBirthYear, $kId, $pId);
+        $stmt->bind_param("ssii",$kidName, $kidBirthYear,  $pid, $kId);
         $success = $stmt->execute();
             $conn->close();
         return $success;
