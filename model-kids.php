@@ -25,11 +25,11 @@ function insertKid($kName, $kBirthYear, $pID) {
         throw $e;
     }
 }
-function updateParent($parentName, $parentCity, $pId) {
+function updateKid($kidName, $kidBirthYear, $pId, $kId) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `parents` set `parent_name` = ?, `city_name` = ? WHERE `parent_id` = ?");
-        $stmt->bind_param("ssi", $parentName, $parentCity, $pId);
+        $stmt = $conn->prepare("UPDATE `kids` set `kid_name` = ?, `kid_birthyear` = ?, `parent_id`=? WHERE `kid_id` = ?");
+        $stmt->bind_param("ssii",$kidName, $kidBirthYear, $pId, $kId);
         $success = $stmt->execute();
             $conn->close();
         return $success;
@@ -38,11 +38,11 @@ function updateParent($parentName, $parentCity, $pId) {
         throw $e;
     }
 }
-function deleteParent($pId) {
+function deleteKid($kId) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE FROM `parents` WHERE `parent_id` = ?");
-        $stmt->bind_param("i", $pId);
+        $stmt = $conn->prepare("DELETE FROM `kids` WHERE `kid_id` = ?");
+        $stmt->bind_param("i", $kId);
         $success = $stmt->execute();
             $conn->close();
         return $success;
