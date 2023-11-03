@@ -7,7 +7,7 @@ include "view-header.php";
 if(isset($_POST['actionType'])){
   switch($_POST['actionType']){
     case "Add":
-        if(insertPet($_POST['kName'],$_POST['kBirthYear'],$_POST['pID'] )){
+        if(insertPet($_POST['pName'],$_POST['pBreed'])){
           echo '<div class="alert alert-success" role="alert">Added a new pet successfully!</div>';
         }
         else{
