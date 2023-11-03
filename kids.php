@@ -15,7 +15,7 @@ if(isset($_POST['actionType'])){
         }
         break;
     case "Edit":
-          if(updateKid($_POST['kidName'], $_POST['kidBirthYear'], $_POST['kId'], $_POST['pId']))
+          if(updateKid($_POST['kidName'], $_POST['kidBirthYear'], $_POST['kId'], $_POST['pid']))
                {
           echo '<div class="alert alert-success" role="alert"> Kid successfully edited!</div>';
           }
