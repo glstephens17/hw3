@@ -39,12 +39,6 @@ include "view-pets-newform.php";
     </button>
   </form>
 </td>
-     <td>
-  <form method="delete" action="pets.php">
-    <input type="hidden" name="petID" value="<?php echo $pet['pet_id'];?>"/>
-    <button type="submit" class="btn btn-primary">Delete</button>
-  </form>
-     </td>     
    </tr>
  <?php  
  }
