@@ -1,3 +1,6 @@
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  
+        
 <?php
 require_once("util-db.php");
 require_once("model-pets.php");
@@ -38,3 +41,10 @@ $pets = selectPets();
 include "view-pets.php";
 include "view-footer.php";
 ?>
+<script>  
+  $(document).ready(function() {  
+    $('#submit-button').click(function() {  
+      Swal.fire('You are about to add a new Pet!');  
+    });  
+  });  
+</script>
