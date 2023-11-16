@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  
 
 <?php
 require_once("util-db.php");
@@ -39,3 +40,10 @@ $pets = selectPets();
 include "view-pets.php";
 include "view-footer.php";
 ?>
+<script>
+  const btn = document.getElementById('submit-button');
+ btn.click(function() {  
+      Swal.fire('Thank you for submitting the form!');  
+    });  
+  });  
+</script>
