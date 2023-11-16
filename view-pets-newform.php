@@ -26,6 +26,13 @@
     <input type="hidden" name="actionType" value="Add">
    <button type="submit" class="btn btn-primary">Add</button>
 </form>
+        <script>  
+  $(document).ready(function() {  
+    $('#submit-button').click(function() {  
+      Swal.fire('Your Pet has been added!');  
+    });  
+  });  
+</script>
           </div>
         </div>
   </div>
