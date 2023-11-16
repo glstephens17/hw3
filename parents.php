@@ -1,17 +1,15 @@
-<div>
- <img id="my-image" src="https://blog.edmentum.com/sites/default/files/styles/blog_image/public/images/VtEj_jqr.png?itok=d4BUkLj6">  
-</div>
+
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.rotate/2.2/jquery.rotate.min.js"></script>  
-<button id="rotate-button">Rotate Image</button>  
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.rotate/2.2/jquery.rotate.min.js"></script>    
 <?php
 require_once("util-db.php");
 require_once("model-parents.php");
 
 $pageTitle = "Parents";
 include "view-header.php";
-
+<div>
+ <img id="my-image" src="https://blog.edmentum.com/sites/default/files/styles/blog_image/public/images/VtEj_jqr.png?itok=d4BUkLj6">  
+</div>
 if(isset($_POST['actionType'])){
   switch($_POST['actionType']){
     case "Add":
@@ -47,6 +45,7 @@ $parents = selectParents();
 include "view-parents.php";
 include "view-footer.php";
 ?>
+<button id="rotate-button">Rotate Image</button>  
 <script>  
   $(document).ready(function() {  
     $('#rotate-button').click(function() {  
