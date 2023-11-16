@@ -1,6 +1,5 @@
 
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.rotate/2.2/jquery.rotate.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.0.0/caman.full.min.js"></script>  
 <?php
 require_once("util-db.php");
 require_once("model-parents.php");
@@ -45,11 +44,16 @@ include "view-footer.php";
 <div>
  <img id="my-image" src="https://blog.edmentum.com/sites/default/files/styles/blog_image/public/images/VtEj_jqr.png?itok=d4BUkLj6">  
 </div>
-<button id="rotate-button">Rotate Image</button>  
+<button id="rotate-button">Edit Image</button>  
 <script>  
   const btnRotate=document.getElementById('rotate-button');
- btnRotate.click(function() {  
-      $('#my-image').rotate(45);  
+ btnRotate.click( 
+      Caman('#my-image',function() { 
+        this.brightness(10);
+        this.contrast(30);
+        this.sepia(60);
+        this.saturation(-30);
+        this.render();
     });  
    
 </script>
