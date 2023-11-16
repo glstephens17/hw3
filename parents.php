@@ -1,5 +1,5 @@
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/camanjs/4.0.0/caman.full.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>  
 <?php
 require_once("util-db.php");
 require_once("model-parents.php");
@@ -41,19 +41,32 @@ $parents = selectParents();
 include "view-parents.php";
 include "view-footer.php";
 ?>
-<div>
- <img id="my-image" src="https://blog.edmentum.com/sites/default/files/styles/blog_image/public/images/VtEj_jqr.png?itok=d4BUkLj6">  
-</div>
-<button id="rotate-button">Edit Image</button>  
+<div id="myCanvas"></div>  
 <script>  
-  const btnRotate=document.getElementById('rotate-button');
- btnRotate.click( 
-      Caman('#my-image',function() { 
-        this.brightness(10);
-        this.contrast(30);
-        this.sepia(60);
-        this.saturation(-30);
-        this.render();
-    }));  
-   
-</script>
+    // Create a scene  
+    const scene = new THREE.Scene();  
+  
+    // Create a camera  
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);  
+    camera.position.z = 5;  
+  
+    // Create a renderer  
+    const renderer = new THREE.WebGLRenderer();  
+    renderer.setSize(window.innerWidth, window.innerHeight);  
+    document.getElementById("myCanvas").appendChild(renderer.domElement);  
+  
+    // Create a cube  
+    const geometry = new THREE.BoxGeometry();  
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });  
+    const cube = new THREE.Mesh(geometry, material);  
+    scene.add(cube);  
+  
+    // Render the scene  
+    function animate() {  
+      requestAnimationFrame(animate);  
+      cube.rotation.x += 0.01;  
+      cube.rotation.y += 0.01;  
+      renderer.render(scene, camera);  
+    }  
+    animate();  
+  </script>  
