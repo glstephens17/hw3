@@ -44,6 +44,5 @@ include "view-footer.php";
   const btn = document.getElementById('submit-button');
  btn.click(function() {  
       Swal.fire('Thank you for submitting the form!');  
-    });  
-  });  
+    });    
 </script>
