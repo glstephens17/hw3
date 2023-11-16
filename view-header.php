@@ -31,6 +31,9 @@
          <li class="nav-item">
           <a class="nav-link" href="geometry.php">Third Party 3D Animations</a>
         </li> 
+         <li class="nav-item">
+          <a class="nav-link" href="video.php">Third Party Video JS</a>
+        </li> 
         <li class="nav-item">
           <a class="nav-link" href="parents-with-kids.php">Parents with kids</a>
         </li> 
