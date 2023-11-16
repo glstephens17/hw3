@@ -7,9 +7,6 @@ require_once("model-parents.php");
 
 $pageTitle = "Parents";
 include "view-header.php";
-<div>
- <img id="my-image" src="https://blog.edmentum.com/sites/default/files/styles/blog_image/public/images/VtEj_jqr.png?itok=d4BUkLj6">  
-</div>
 if(isset($_POST['actionType'])){
   switch($_POST['actionType']){
     case "Add":
@@ -45,6 +42,9 @@ $parents = selectParents();
 include "view-parents.php";
 include "view-footer.php";
 ?>
+<div>
+ <img id="my-image" src="https://blog.edmentum.com/sites/default/files/styles/blog_image/public/images/VtEj_jqr.png?itok=d4BUkLj6">  
+</div>
 <button id="rotate-button">Rotate Image</button>  
 <script>  
   $(document).ready(function() {  
