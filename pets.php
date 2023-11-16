@@ -42,10 +42,9 @@ include "view-pets.php";
 include "view-footer.php";
 ?>
 <script>  
-  $(document).ready(function() {  
     var canvas = document.getElementById("my-chart");  
   
-    var myChart = new Chart(canvas, {  
+    new Chart(canvas, {  
       type: 'bar',  
       data: {  
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],  
@@ -67,7 +66,7 @@ include "view-footer.php";
           }]  
         }  
       }  
-    });  
+    } 
   });  
 </script>  
 
