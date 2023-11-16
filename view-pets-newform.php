@@ -25,7 +25,7 @@
     <input type="text" class="form-control" id="pBreed" name="pBreed">
   </div>
     <input type="hidden" name="actionType" value="Add">
-   <button type="submit" class="btn btn-primary">Add</button>
+   <button id="submit-button" type="submit" class="btn btn-primary">Add</button>
 </form>
         <script>  
   $(document).ready(function() {  
