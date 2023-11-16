@@ -27,14 +27,15 @@
           <input type="hidden" name="pId" value="<?php echo $pet['pet_id'];?>">
           <input type="hidden" name="actionType" value="Edit">
    <button id="submit-button" type="submit" class="btn btn-primary">Add</button>
-         <script>  
+        
+</form>
+<script>  
   $(document).ready(function() {  
     $('#submit-button').click(function() {  
       Swal.fire('Your Pet has been edited!');  
     });  
   });  
 </script>
-</form>
           </div>
         </div>
   </div>
