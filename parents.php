@@ -40,7 +40,3 @@ $parents = selectParents();
 include "view-parents.php";
 include "view-footer.php";
 ?>
-
-    }  
-    animate();  
-  </script>  
