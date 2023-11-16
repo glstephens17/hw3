@@ -65,8 +65,7 @@ include "view-footer.php";
             }  
           }]  
         }  
-      }  
-    } 
+      }   
   });  
 </script>  
 
