@@ -54,6 +54,6 @@ include "view-footer.php";
         this.sepia(60);
         this.saturation(-30);
         this.render();
-    });  
+    }));  
    
 </script>
