@@ -7,7 +7,7 @@ include "view-header.php";
 include "view-footer.php";
 ?>
 <video id="myVideo" controls>  
-  <source src="https://www.youtube.com/watch?v=c0MrSpTWc8o" type="video/webm">  
+  <source src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4" type="video/mp4">  
 </video>  
   <script>  
     const player = new Plyr('#myVideo');  
