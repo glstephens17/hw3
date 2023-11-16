@@ -1,4 +1,4 @@
-<h1>Kids</h1>
+<h1>Kid s</h1>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <?php
 include "view-kids-newform.php";
