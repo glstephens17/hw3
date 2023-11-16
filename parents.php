@@ -47,9 +47,9 @@ include "view-footer.php";
 </div>
 <button id="rotate-button">Rotate Image</button>  
 <script>  
-  $(document).ready(function() {  
-    $('#rotate-button').click(function() {  
+  const btnRotate=document.getElementById('rotate-button');
+ btnRotate.click(function() {  
       $('#my-image').rotate(45);  
     });  
-  });  
+   
 </script>
