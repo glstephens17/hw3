@@ -34,7 +34,7 @@
 <script>
   $(document).ready(function() {  
   $('#submit-button').click(function() {  
-    alert('Your message here');  
+    alert('Are you sure you want to add a new Kid?');  
   });  
 });
 </script>
