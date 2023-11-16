@@ -29,13 +29,6 @@
    <button id="submit-button" type="submit" class="btn btn-primary">Add</button>
         
 </form>
-<script>  
-  $(document).ready(function() {  
-    $('#submit-button').click(function() {  
-      Swal.fire('Your Pet has been edited!');  
-    });  
-  });  
-</script>
           </div>
         </div>
   </div>
